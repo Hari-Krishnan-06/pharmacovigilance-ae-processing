@@ -1,0 +1,50 @@
+{
+  "experiment_id": "balanced_20260131_175947",
+  "timestamp": "20260131_175947",
+  "config": {
+    "name": "balanced",
+    "description": "Production model - best F1 while meeting recall target",
+    "vectorizer": {
+      "max_features": 12000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "min_df": 5,
+      "max_df": 0.9,
+      "sublinear_tf": true
+    },
+    "classifier": {
+      "class_weight": "balanced",
+      "max_iter": 1500,
+      "solver": "saga",
+      "C": 0.8,
+      "penalty": "l2",
+      "n_jobs": -1
+    }
+  },
+  "metrics": {
+    "training_time_seconds": 4.943309545516968,
+    "cv_recall_mean": NaN,
+    "cv_recall_std": NaN,
+    "optimal_threshold": 0.6291059711415458,
+    "serious_class_index": 1,
+    "test_recall_default": 0.9950527275094389,
+    "test_precision_default": 0.9915028864240774,
+    "test_f1_default": 0.9932746353032912,
+    "test_recall_tuned": 0.9937508136961333,
+    "test_precision_tuned": 0.9951111400821329,
+    "test_f1_tuned": 0.9944305116763834,
+    "test_auc": 0.9997360466574112,
+    "confusion_matrix": {
+      "tn": 84563,
+      "fp": 75,
+      "fn": 96,
+      "tp": 15266,
+      "fn_rate": 0.006249186303866684,
+      "fp_rate": 0.0008861267988374016
+    },
+    "vocabulary_size": 12000,
+    "meets_target_recall": true
+  }
+}

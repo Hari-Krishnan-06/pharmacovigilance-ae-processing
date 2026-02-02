@@ -1,0 +1,9 @@
+{
+  "threshold": 0.6291059711415458,
+  "config_name": "balanced",
+  "sample_size": 500000,
+  "timestamp": "2026-01-31T18:13:52.511633",
+  "target_recall_achieved": true,
+  "data_version": "v2",
+  "selection_criteria": "recall-first (patient safety), balanced preferred"
+}

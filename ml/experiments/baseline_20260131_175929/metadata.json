@@ -1,0 +1,59 @@
+{
+  "threshold": 0.6629665009678055,
+  "config": {
+    "name": "baseline",
+    "description": "Reliable baseline - standard balanced weighting",
+    "vectorizer": {
+      "max_features": 10000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "min_df": 5,
+      "max_df": 0.95,
+      "sublinear_tf": true
+    },
+    "classifier": {
+      "class_weight": "balanced",
+      "max_iter": 1000,
+      "solver": "lbfgs",
+      "C": 1.0,
+      "n_jobs": -1
+    }
+  },
+  "metrics": {
+    "training_time_seconds": 5.192460060119629,
+    "cv_recall_mean": NaN,
+    "cv_recall_std": NaN,
+    "optimal_threshold": 0.6629665009678055,
+    "serious_class_index": 1,
+    "test_recall_default": 0.9937508136961333,
+    "test_precision_default": 0.9875792469918488,
+    "test_f1_default": 0.990655418559377,
+    "test_recall_tuned": 0.9919932300481709,
+    "test_precision_tuned": 0.9934159061277705,
+    "test_f1_tuned": 0.9927040583675331,
+    "test_auc": 0.9994287906597068,
+    "confusion_matrix": {
+      "tn": 84537,
+      "fp": 101,
+      "fn": 123,
+      "tp": 15239,
+      "fn_rate": 0.008006769951829189,
+      "fp_rate": 0.0011933174224343676
+    },
+    "vocabulary_size": 10000,
+    "meets_target_recall": true
+  },
+  "timestamp": "2026-01-31T17:59:47.285442",
+  "sample_size": 500000,
+  "random_state": 42,
+  "target_recall": 0.85,
+  "data_version": "v2",
+  "sampling_method": "stratified_across_full_dataset",
+  "notes": [
+    "Model selection based on recall (patient safety), not ROC-AUC",
+    "Threshold tuned on validation set only (no test set leakage)",
+    "Class index verified at runtime (no assumptions)"
+  ]
+}

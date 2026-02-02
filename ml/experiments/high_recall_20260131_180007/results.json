@@ -1,0 +1,54 @@
+{
+  "experiment_id": "high_recall_20260131_180007",
+  "timestamp": "20260131_180007",
+  "config": {
+    "name": "high_recall",
+    "description": "Experimental - max recall (inspect FP/FN before deployment)",
+    "vectorizer": {
+      "max_features": 15000,
+      "ngram_range": [
+        1,
+        3
+      ],
+      "min_df": 3,
+      "max_df": 0.95,
+      "sublinear_tf": true
+    },
+    "classifier": {
+      "class_weight": {
+        "Serious": 0.7,
+        "Non-Serious": 0.3
+      },
+      "max_iter": 1000,
+      "solver": "saga",
+      "C": 0.5,
+      "penalty": "l1",
+      "n_jobs": -1
+    },
+    "warning": "\u26a0\ufe0f Manual class weights - verify FP rate before deployment"
+  },
+  "metrics": {
+    "training_time_seconds": 419.4689974784851,
+    "cv_recall_mean": NaN,
+    "cv_recall_std": NaN,
+    "optimal_threshold": 0.3647155790975682,
+    "serious_class_index": 1,
+    "test_recall_default": 0.9893243067308944,
+    "test_precision_default": 0.9964594807238395,
+    "test_f1_default": 0.9928790749330372,
+    "test_recall_tuned": 0.9916026559041792,
+    "test_precision_tuned": 0.993672537508154,
+    "test_f1_tuned": 0.9926365176593249,
+    "test_auc": 0.9989892486173584,
+    "confusion_matrix": {
+      "tn": 84541,
+      "fp": 97,
+      "fn": 129,
+      "tp": 15233,
+      "fn_rate": 0.008397344095820857,
+      "fp_rate": 0.0011460573264963727
+    },
+    "vocabulary_size": 15000,
+    "meets_target_recall": true
+  }
+}
