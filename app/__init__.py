@@ -1,1 +1,0 @@
-# Pharmacovigilance App Package
